@@ -4,6 +4,23 @@
 #+OPTIONS: H:2
 
 * Social Networks: Privacy and Problems
+** What this talk is and isn't
+*** What it is							    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+   + Review the way the Big Three of social networks handle privacy
+   + Discuss the kinds of privacy we'd expect to have online
+   + Briefly introduce various security and privacy models relevant to operating systems
+   + Discuss ways we can try to do better with privacy
+** What this talk is and isn't
+*** What it ain't						    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+    + a fully fledged design of a new social network
+    + the solution to all of our problems
+    + a heartbreaking work of staggering genius
 ** Defining Our Terms
    + Social network \pause
    + Post \pause
@@ -17,8 +34,19 @@
 ** Feeling Safe
 * Failing of Current Networks
 ** Facebook
+   + Most flexible of the Big Three
+     + Allows you to create custom filters
+     + Allows friends, friends of friends, and public as tiers
+   + Viewing and commenting and sharing are entangled
+   + (in my opinion) the least flexible in content creation itself
 ** Twitter 
+   + only two privacy methods \pause
+     1) blocking
+     2) locking down \pause
+   + No way to control sharing of a public tweet
 ** Tumblr
+   + only one privacy method \pause
+   + really mediocre blocking
 * Conversations in Person
 ** Face-to-Face
 ** Interrupting Strangers
@@ -49,9 +77,19 @@
 ** Secrecy: Data Flows from Low to High
    + Secret information shouldn't leak \pause
    + Bell-LaPadula model of secrecy \pause
+   + Security for operating systems and software
 ** Secrecy: Read Low, Write High
+   + Bell-LaPadula says you can always makes something more secret \pause
+   + Only special actors can make something less secret again \pause
+   + Have an ordering to define secrecy \pause
    + 
 ** Secrecy as Applied to Social Media
+   + Imagine labeling users as \pause
+     + trusted \pause
+     + neutral \pause
+     + unsafe \pause
+   + Label posts by the same labels \pause
+   + Have a Bell-LaPadula relation of trusted > neutral > unsafe
 ** Access Control Lists
 ** Capabilities
 * What Could a New Social Network Look Like?
