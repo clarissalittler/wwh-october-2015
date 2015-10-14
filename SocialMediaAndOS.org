@@ -31,7 +31,12 @@
    + Mob behavior \pause
    + Contextless quoting
 ** Controlling Content
+   + Sharing and reading should be separate permissions
+   + Sharing and commenting should also be separate permissions
+   + 
 ** Feeling Safe
+   + Old adage: You can't solve social problems with technical solutions \pause
+   + But maybe we can *help*
 * Failing of Current Networks
 ** Facebook
    + Most flexible of the Big Three
@@ -45,25 +50,43 @@
      2) locking down \pause
    + No way to control sharing of a public tweet
 ** Tumblr
-   + only one privacy method \pause
-   + really mediocre blocking
+   + two privacy methods \pause
+   + really mediocre blocking \pause
+   + completely making your site inaccessible from the web
 * Conversations in Person
 ** Face-to-Face
+   + Face to face conversations are
+     + more personal \pause
+     + have an expectation of discretion in sharing \pause
+   + Even in a public place, expectation of privacy
+     + different tiers of expectation
 ** Interrupting Strangers
-*** A Scenario							    :B_block:
+*** Restaurant 							    :B_block:
     :PROPERTIES:
     :BEAMER_env: block
     :END:
     Imagine you're overhearing strangers in a restaurant, talking about a topic you have strong opinions on. You walk over to their table and start talking to them. Rude or reasonable?
 \pause
-*** Another Scenario						    :B_block:
+*** Hackathon 							    :B_block:
     :PROPERTIES:
     :BEAMER_env: block
     :END:
     Imagine you're overhearing strangers at a hackathon, talking about a topic you have strong opinions on. You scootch your chair over and start talking to them. Rude or reasonable?
+*** 								    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+    What's the difference?
+** What's the analogue of public face-to-face?
+   + Not DMs/PMs \pause
+     + Those are private communication \pause
+   + In no social media is there a clear equivalent \pause
+   + But there *should* be \pause
+     + 
 ** Small Scale vs. Large Scale Responses
 ** Don't Tell [REDACTED]
-   + Sometimes information has to remain protected
+   + Sometimes information has to remain protected \pause
+   + Some individuals should be excluded \pause
 ** 
 * Privacy: Existing Solutions
 ** Integrity: Data Flows from High to Low
@@ -94,7 +117,9 @@
 ** Capabilities
 * What Could a New Social Network Look Like?
 ** Control over Viewing
+   + Information shouldn't flow 
 ** Control over Sharing
+** Control over Commenting
 ** Setting Layers of Privacy
 ** Friends, Enemies, and Various Frenemic Configurations
 * Open Problems
