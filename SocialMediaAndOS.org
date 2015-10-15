@@ -31,9 +31,9 @@
    + Mob behavior \pause
    + Contextless quoting
 ** Controlling Content
-   + Sharing and reading should be separate permissions
-   + Sharing and commenting should also be separate permissions
-   + 
+   + Sharing and reading should be separate permissions \pause
+   + Sharing and commenting should also be separate permissions \pause
+   + Controls over 
 ** Feeling Safe
    + Old adage: You can't solve social problems with technical solutions \pause
    + But maybe we can *help*
@@ -82,14 +82,14 @@
      + Those are private communication \pause
    + In no social media is there a clear equivalent \pause
    + But there *should* be \pause
-     + 
+     + Choosing 
 ** Small Scale vs. Large Scale Responses
 ** Don't Tell [REDACTED]
    + Sometimes information has to remain protected \pause
    + Some individuals should be excluded \pause
 ** 
 * Privacy: Existing Solutions
-** Integrity: Data Flows from High to Low
+** Integrity: Data Flows from High to Low			   :noexport:
    + Biba integrity model \pause
    + Invented by Kenneth J. Biba in 1975 (ref) \pause
    + Measure of integrity of data \pause
@@ -100,24 +100,37 @@
 ** Secrecy: Data Flows from Low to High
    + Secret information shouldn't leak \pause
    + Bell-LaPadula model of secrecy \pause
-   + Security for operating systems and software
+   + Security for operating systems and software \pause
+   + A set of labels attached to all resources
 ** Secrecy: Read Low, Write High
    + Bell-LaPadula says you can always makes something more secret \pause
    + Only special actors can make something less secret again \pause
    + Have an ordering to define secrecy \pause
-   + 
+   + Tiers of secrecy
 ** Secrecy as Applied to Social Media
    + Imagine labeling users as \pause
      + trusted \pause
      + neutral \pause
-     + unsafe \pause
+     + untrusted \pause
+     + dangerous \pause
    + Label posts by the same labels \pause
-   + Have a Bell-LaPadula relation of trusted > neutral > unsafe
+   + Have a Bell-LaPadula relation of trusted > neutral > unsafe > dangerous
+** Example Policy
+   + Trusted users can see and repost and comment \pause
+   + Neutral users can see and repost \pause
+   + Unstrusted users can only see \pause
+   + Dangerous users can't even see
+** Observations 
+   
 ** Access Control Lists
 ** Capabilities
+   + Capabilities 
 * What Could a New Social Network Look Like?
 ** Control over Viewing
-   + Information shouldn't flow 
+   + When you make a post you control who sees it \pause
+     + Even when shared by others
+     + Even when commented on
+     + And changes should be retroactive
 ** Control over Sharing
 ** Control over Commenting
 ** Setting Layers of Privacy
