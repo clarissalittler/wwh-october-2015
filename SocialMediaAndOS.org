@@ -25,6 +25,11 @@
    + Social network \pause
    + Post \pause
    + Sharing
+** Interacting With Content
+   + viewing
+   + replying
+   + sharing
+   + sharing with commentary
 ** What Is The Problem?
    + Harassment \pause
    + Loss of control \pause
@@ -87,16 +92,15 @@
 ** Don't Tell [REDACTED]
    + Sometimes information has to remain protected \pause
    + Some individuals should be excluded \pause
-** 
-* Privacy: Existing Solutions
-** Integrity: Data Flows from High to Low			   :noexport:
-   + Biba integrity model \pause
-   + Invented by Kenneth J. Biba in 1975 (ref) \pause
-   + Measure of integrity of data \pause
-   + Data can move high to low
-** Integrity: Read High, Write Low				   :noexport:
-** Integrity as Applied to Social Media				   :noexport:
-   I'm still working on figuring out how to write this section and maybe there's not much to say
+* Privacy in Operating Systems
+** Control flow of secrecy
+** Capabilities
+   + Special pointers to resources
+* Privacy in Social Networks
+** Lattice of Interaction
+   + four different interactions
+   + 2^4 => 16 possible labels
+   + simplify combinations that make no sense
 ** Secrecy: Data Flows from Low to High
    + Secret information shouldn't leak \pause
    + Bell-LaPadula model of secrecy \pause
@@ -120,8 +124,7 @@
    + Neutral users can see and repost \pause
    + Unstrusted users can only see \pause
    + Dangerous users can't even see
-** Observations 
-   
+** Observations    
 ** Access Control Lists
 ** Capabilities
    + Capabilities 
