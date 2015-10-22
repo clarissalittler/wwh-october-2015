@@ -1,5 +1,5 @@
-#+STARTUP: beamer
-#+TITLE: Social Networks and Models of Privacy
+#+startup: beamer
+#+TITLE: Social Networks and Privacy Models
 #+AUTHOR: Clarissa Littler
 #+OPTIONS: H:2
 
@@ -94,31 +94,88 @@
    + Some individuals should be excluded \pause
 * Privacy in Operating Systems
 ** Control flow of secrecy
-** Capabilities
-   + Special pointers to resources
+   + information flows low to high \pause
+   + Read high security \pause => can't write low security \pause
+   + A system of labels \pause
+   + Bell-LaPadula \pause 
+** Lattice of labels
+*** Secrecy levels 						    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+   {Top-secret, secret, public}
+*** A Simple Lattice						    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+
+    #+BEGIN_SRC dot :file firstlattice.png :exports results :cmdline -Kdot -Tpng
+      digraph G {
+        topsecret -> secret;
+        secret -> public;
+      }
+    #+END_SRC
+
+    #+RESULTS:
+    [[file:firstlattice.png]]
+
+** Lattice of labels
+*** Secrecy levels
+ {public, secret, top secret, world domination, world domination master plan}
+*** A complex lattice						    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+
+  #+BEGIN_SRC dot :file secondlattice.png :exports results :cmdline -Kdot -Tpng
+    digraph {
+       masterplan -> worlddomination;
+       masterplan -> topsecret;
+       worlddomination -> public;
+       topsecret -> secret;
+       secret -> public;
+    }
+  #+END_SRC
+  #+ATTR_LATEX: :width 3cm
+  #+RESULTS:
+  [[file:secondlattice.png]]
+** Capabilities in Operating Systems
+   + special pointers to resources \pause
+   + contain permissions for how to access the resource \pause
+     + reading \pause
+     + writing \pause
+     + sharing
+** Capabilities don't need to be checked
+   + possession is 9/10 of the law \pause
+   + sharing hands over a capability \pause
+   + sharing is itself a permission
+** Capabilities don't ensure security
+   + resource with permissions \pause
+   + policy determines how permissions are given \pause
+   + policy maker has to enforce policy
 * Privacy in Social Networks
-** Lattice of Interaction
-   + four different interactions
-   + 2^4 => 16 possible labels
-   + simplify combinations that make no sense
-** Secrecy: Data Flows from Low to High
-   + Secret information shouldn't leak \pause
-   + Bell-LaPadula model of secrecy \pause
-   + Security for operating systems and software \pause
-   + A set of labels attached to all resources
-** Secrecy: Read Low, Write High
-   + Bell-LaPadula says you can always makes something more secret \pause
-   + Only special actors can make something less secret again \pause
-   + Have an ordering to define secrecy \pause
-   + Tiers of secrecy
+** Posts as Capabilities
+   + followers get pointers to posts with permissions \pause
+   + a capability \pause
+   + permissions include \pause
+     + view \pause
+     + share \pause
+     + reply \pause
+     + share with comment \pause
+     + change permissions
 ** Secrecy as Applied to Social Media
    + Imagine labeling users as \pause
      + trusted \pause
-     + neutral \pause
      + untrusted \pause
      + dangerous \pause
-   + Label posts by the same labels \pause
-   + Have a Bell-LaPadula relation of trusted > neutral > unsafe > dangerous
+     + coworker \pause
+     + boss \pause
+   + Every post is similarly labeled
+** Policy Enforcement
+   + 
+** What does this buy us?
+   + social network -> trusted network \pause
+   + more careful curation
 ** Example Policy
    + Trusted users can see and repost and comment \pause
    + Neutral users can see and repost \pause
