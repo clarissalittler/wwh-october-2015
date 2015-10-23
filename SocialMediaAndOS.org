@@ -2,6 +2,8 @@
 #+TITLE: Social Networks and Privacy Models
 #+AUTHOR: Clarissa Littler
 #+OPTIONS: H:2
+#+latex_header: \mode<beamer>{\usetheme{Madrid}}
+
 
 * Social Networks: Privacy and Problems
 ** What this talk is and isn't
@@ -9,40 +11,53 @@
     :PROPERTIES:
     :BEAMER_env: block
     :END:
-   + Review the way the Big Three of social networks handle privacy
-   + Discuss the kinds of privacy we'd expect to have online
-   + Briefly introduce various security and privacy models relevant to operating systems
-   + Discuss ways we can try to do better with privacy
+   + Review the way the Big Three of social networks handle privacy \pause
+   + Discuss the kinds of privacy we'd expect to have online \pause
+   + Briefly introduce various security and privacy models relevant to operating systems \pause
+   + Discuss ways we can try to do better with privacy 
 ** What this talk is and isn't
 *** What it ain't						    :B_block:
     :PROPERTIES:
     :BEAMER_env: block
     :END:
-    + a fully fledged design of a new social network
-    + the solution to all of our problems
+    + a fully fledged design of a new social network \pause
+    + the solution to all of our problems \pause
     + a heartbreaking work of staggering genius
 ** Defining Our Terms
    + Social network \pause
    + Post \pause
    + Sharing
 ** Interacting With Content
-   + viewing
-   + replying
-   + sharing
+   + viewing \pause
+   + replying \pause
+   + sharing \pause
    + sharing with commentary
+** Controlling Content
+   + Reading vs. sharing \pause
+   + Sharing vs. commenting \pause
+   + Commenting vs. replying 
 ** What Is The Problem?
    + Harassment \pause
    + Loss of control \pause
-   + Mob behavior \pause
-   + Contextless quoting
-** Controlling Content
-   + Sharing and reading should be separate permissions \pause
-   + Sharing and commenting should also be separate permissions \pause
-   + Controls over 
+   + Loss of context \pause
+   + Mob behavior
 ** Feeling Safe
-   + Old adage: You can't solve social problems with technical solutions \pause
-   + But maybe we can *help*
-* Failing of Current Networks
+*** The Motivation					      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.4
+    :END:
+
+   In order to continue using social networks, we need better ways of controlling conversations. The current state isn't sustainable.
+\pause
+*** The Hope						      :B_block:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :BEAMER_col: 0.4
+    :END:
+Operating system security and offline courtesy might inspire social media privacy solutions.
+   
+* The State of Privacy in Current Networks
 ** Facebook
    + Most flexible of the Big Three
      + Allows you to create custom filters
@@ -58,7 +73,7 @@
    + two privacy methods \pause
    + really mediocre blocking \pause
    + completely making your site inaccessible from the web
-* Conversations in Person
+* Offline Conversations
 ** Face-to-Face
    + Face to face conversations are
      + more personal \pause
@@ -77,27 +92,24 @@
     :BEAMER_env: block
     :END:
     Imagine you're overhearing strangers at a hackathon, talking about a topic you have strong opinions on. You scootch your chair over and start talking to them. Rude or reasonable?
-*** 								    :B_block:
-    :PROPERTIES:
-    :BEAMER_env: block
-    :END:
-    What's the difference?
 ** What's the analogue of public face-to-face?
    + Not DMs/PMs \pause
      + Those are private communication \pause
-   + In no social media is there a clear equivalent \pause
-   + But there *should* be \pause
-     + Choosing 
+   + In no platform is there a clear equivalent \pause
+   + But there *should* be
 ** Small Scale vs. Large Scale Responses
-** Don't Tell [REDACTED]
-   + Sometimes information has to remain protected \pause
-   + Some individuals should be excluded \pause
+   + One person misunderstands your point \pause
+   + One person calls you an asshole \pause
+   + One person yells at you for being wrong \pause
+   + What about thousands?
+** Controlling Flow of Information
+   
 * Privacy in Operating Systems
 ** Control flow of secrecy
    + information flows low to high \pause
    + Read high security \pause => can't write low security \pause
    + A system of labels \pause
-   + Bell-LaPadula \pause 
+   + Bell-LaPadula
 ** Lattice of labels
 *** Secrecy levels 						    :B_block:
     :PROPERTIES:
@@ -139,6 +151,24 @@
   #+ATTR_LATEX: :width 3cm
   #+RESULTS:
   [[file:secondlattice.png]]
+** Access Control Lists
+   + Resources have permissions attached to them \pause
+   + Checked every time \pause
+   + Files, hardware, etc. 
+** Role Based Access Control
+   + Control access by assigning roles \pause
+   + Groups in Linux \pause
+   + Databases \pause
+   + Permissions-by-job
+** Principle of Least Privilege
+*** 								    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+    Every element of the system should operate with exactly what permissions it needs to function
+    Every agent in a system should operate with as few permissions as needed
+** Mandatory Access Control
+** Discretionary Access Control
 ** Capabilities in Operating Systems
    + special pointers to resources \pause
    + contain permissions for how to access the resource \pause
@@ -172,7 +202,16 @@
      + boss \pause
    + Every post is similarly labeled
 ** Policy Enforcement
-   + 
+** Role Based Social Media
+   + Google+ circles \pause
+   + Custom lists on facebook \pause
+   + Most common
+** ACLs in Social Media
+*** 								    :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+    An ACL analogue would involve every post listing permissions for all users
 ** What does this buy us?
    + social network -> trusted network \pause
    + more careful curation
@@ -181,10 +220,6 @@
    + Neutral users can see and repost \pause
    + Unstrusted users can only see \pause
    + Dangerous users can't even see
-** Observations    
-** Access Control Lists
-** Capabilities
-   + Capabilities 
 * What Could a New Social Network Look Like?
 ** Control over Viewing
    + When you make a post you control who sees it \pause
@@ -195,6 +230,4 @@
 ** Control over Commenting
 ** Setting Layers of Privacy
 ** Friends, Enemies, and Various Frenemic Configurations
-* Open Problems
-** In Which I Advocate Against Myself
-** A Question of Performance
+
