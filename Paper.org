@@ -1,0 +1,20 @@
+#+TITLE: Social Networks and Privacy Models
+#+AUTHOR: Clarissa Littler
+
+* Introduction
+** The Problem
+** Surveying the Field
+** An Outline
+* In-person Interactions
+** Examples
+*** Restaurant
+*** Hackathon
+*** Party
+** Social Contracts
+* Online Interactions 
+** Scope
+** Scale
+* Separating Permissions
+** Permissions in Operating Systems 
+** Permissions in Social Media
+** 
