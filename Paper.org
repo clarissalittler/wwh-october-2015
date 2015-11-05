@@ -3,8 +3,34 @@
 
 * Introduction
 ** The Problem
+   Handling privacy and control over content is still an open problem for social media.
+
+   Currently, for any of the major social networks, the more you make full use of social media the more you open yourself up to interactions you don't want: people you don't want to talk to are responding to your words, you're being dragged into conversations you don't want to have, people missing the point with their comments on your work or stripping away attributions from art. 
+
+   Stories of harassment on social media are common place. Not only are conversations regularly, rudely, interrupted but if a post "goes viral" and is quickly spread, then the post's author almost always faces some kind of social consequences. Whether it's several hundred or thousand people not getting the joke and sending variants of the same angry message or it's targeted harassment for an unpopular opinion, the more people who see a post the more potential danger there is for the creator of the post.
+
+   Now, one might be tempted to rebut that these conversations are happening on the public internet and are, thus, fair game for anyone who sees them, but I think that's a rather limiting notion of human interaction. After all, we have expectations of privacy even in offline public places. You don't expect random people to start arguments with you when you're sitting and speaking quietly with a friend, no matter how many people you know or how much social influence you have. 
+
+   I don't think that we should give up our social rules and politeness and respect for each other because it's a new form of communication. In fact, I'd argue the opposite: we need to find better ways to express and enforce how we want to interact with each other. 
+   
+   Exploring how to do that is going to be the bulk of this note, but first we need to discuss the current state of things.
 ** Surveying the Field
+   For the purpose of this note, we'll be discussing just Facebook, Twitter, and Tumblr as examples of social networks. Not just because these are the ones I'm most familiar with, but also because they're the most popular general-purpose social networks. By general purpose I mean there is a variety of content types and modes of interaction with the site, as opposed to something like Instagram or Vine which is much more special focused on one kind of content and interaction.
+
+   First, we'll discuss the privacy of Facebook. Facebook probably has the most flexible privacy of the three networks we'll be discussing. You can set custom filters on a per-post basis and there's built in tiers of friends, friends-of-friends, and public. In general, though, these filters are about who can *see* a post and there's no distinctions over what types of interactions someone is allowed if they can see the post. Visibility, in a sense, grants all possible permissions on the content.
+
+   Twitter is, by comparison, very very limited in its privacy model. You can block an individual or you can lock down your account so it is only viewable by your followers and you must manually approve requests to follow you. This is a very all-or-nothing idea of privacy: either you are whispering in a private residence or you are making public challenges at a free-for-all debate, neither of which are particularly natural modes of interaction.
+
+   Tumblr is similar to Twitter in this regard. You can make your blog password protected, you can block, and you can make your blog viewable only on someone else's dash and not by directly visiting your blog's URL. Again, these are fairly all-or-nothing approaches to privacy. If someone can see a post then they can interact with it in any possible way.
+
 ** An Outline
+   For the rest of this note, we'll be addressing one attempt at addressing these issues of privacy in social media. We'll start by layout out, from real life situations, the kinds of expectations of privacy we'd want to have. Then we'll be trying to semi-rigorously lay out all the different forms of interaction we might want to have in social media, teasing apart some separate concepts that I think are conflated in existing systems.
+
+   Then we'll be describing the idea of "permissions" in relation to social media and interaction with content and how fine grained separation of permissions might help improve our networks.
+
+   After that, we'll discuss the notion of capabilities in operating systems and how a concept very much like capabilities can help guide us in understanding how to view privacy on a per-post basis and how to control information flow. 
+
+   Finally, we'll discuss what this hypothetical social network will look like by going through a series of use cases.
 * In-person Interactions
 ** Examples
 *** Restaurant
