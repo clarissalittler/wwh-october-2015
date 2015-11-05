@@ -17,4 +17,8 @@
 * Separating Permissions
 ** Permissions in Operating Systems 
 ** Permissions in Social Media
-** 
+* Capabilities
+** In Operating Systems
+** Posts as Capabilities
+* A Rough Design
+
