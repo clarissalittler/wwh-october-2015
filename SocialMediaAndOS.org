@@ -2,7 +2,7 @@
 #+TITLE: Social Networks and Privacy Models
 #+AUTHOR: Clarissa Littler
 #+OPTIONS: H:2
-#+latex_header: \mode<beamer>{\usetheme{Warsaw}}
+#+latex_header: \mode<beamer>{\usetheme{Madrid}}
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [bigger]
 
