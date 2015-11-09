@@ -32,11 +32,20 @@
 
    Finally, we'll discuss what this hypothetical social network will look like by going through a series of use cases.
 * In-person Interactions
+  In this section we'll be talking about a number of examples of social interactions that occur in person and discussing the ideas of privacy in interactions that are relevant. I don't intend to classify the gamut of human interaction, but just the ones that seem relevant to our experience of social media. 
 ** Examples
 *** Restaurant
-*** Hackathon
-*** Party
+    Imagine being in a restaurant, talking with your friends at your own table. You don't expect anyone to come up to your table and talk to you. You wouldn't expect someone to invite themselves to sit at your table and participate on this time together. 
+
+    By the standards people often use to describe the internet, you should expect those things! After all, you're in public and public means a free-for-all. Of course, that's obviously not true about our in person interactions. In the restaurant example, there's a sense of privacy and expectation that others are excluded from participating. You know full well that people may *listen* to your conversations. I can't really stop my ability to hear all the conversations going on around me in a public place, but I'm never even tempted to invite myself to join in because it's simply understood that that's rude: it violates expectation of privacy.
+
+    In terms of social media, this is the equivalent of being able to witness a conversation but not participate in it. That's a mode of interaction that no current social network can really support. The closest example would be when you can witness Facebook friends commenting on other people's posts from the sidebar. You can't *set* conversations in Facebook to be public-but-exclusive. 
+*** Hack night
+    Imagine being at a hack night. You're at a venue with large tables and everyone has set up with their laptops and drinks of choice. Nothing organized is happening, just people working on their individual projects and chatting. You're talking with a friend about your newest pet project when someone else at your table perks up and joins the conversation because it's a topic they love too.
+
+    Is that an odd occurence? Would it be unexpected? In this situation, not really. It's expected that other people would want to join in conversations that are relevant to their interests. In the context of a hackathon or the like, part of the goal is to connect with people interested in similar things.
 ** Social Contracts
+   In this section, I won't be presenting any sort of grand philosophic or sociologic thesis, but I want to somewhat informall use the idea of a social contract to discuss why online interactions play by  
 * Online Interactions 
 ** Scope
 ** Scale
