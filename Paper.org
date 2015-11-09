@@ -45,15 +45,76 @@
 
     Is that an odd occurence? Would it be unexpected? In this situation, not really. It's expected that other people would want to join in conversations that are relevant to their interests. In the context of a hackathon or the like, part of the goal is to connect with people interested in similar things.
 ** Social Contracts
-   In this section, I won't be presenting any sort of grand philosophic or sociologic thesis, but I want to somewhat informall use the idea of a social contract to discuss why online interactions play by  
-* Online Interactions 
-** Scope
-** Scale
+   In this section, I won't be presenting any sort of grand philosophic or sociologic thesis, but I want to somewhat informal use the idea of a social contract to discuss why social media interactions play by different rules than in-person social groups.
+
+   I claim that, to at least a first approximation, a kind of social contract binds in-person social groups together. Whether's it's a group of friends or a group of professionals, there's going to be some kind of social rules that you need to obey. If you break them, then the consequences are generally exclusion.
+
+   Everyone has some experience with this, I think. We've all been in that group of friends where one person starts being rude or hostile and, after awhile, they simply start being excluded. This is even true of professional settings: someone who's hostile in a workplace may be fired or a colleague may find that no one wants to work with them on their projects anymore. No matter the scenario, there tend to be at least some kind of consequences for poor behavior, for violating the social contract that holds a group together.
+  
+   Even in earlier forms of online communication such as message boards, forums, and mailing lists there was still some notion of punishment for acting out: you could be kicked out of the group by an administrator. 
+
+   I argue that in social media, which are by design very distributed and lightweight in their connections between people, there is no effective notion of punishment for poor behavior. You might counter that the admins for the site could enforce punishment, but that's not really true. Kicking people off of Twitter or Facebook or Tumblr only barely addresses the problem. An individual can always make new accounts with new email addresses and variations of their old screen name and beyond that it doesn't take long for someone to reestablish their online presence. Also, the problem of scale, which we'll discuss further, means that accusations of harassment *can't* be investigated thoroughly. I don't have data on this assertion, but it's at the very least my subjective observation that reports of harassment are used at least as often as an offensive weapon as a defensive one, with organized attempts to kick individuals off of the site being itself a form of harassment. 
+
+   Blocking individuals, whether manually or with semi-automated block lists, is also not a real form of punishment. It's easy enough to make more sock-puppet accounts if you really want to harass someone. It's even easier to get as many of your friends who will listen to also harass the target. 
+** What Makes Social Media Different?
+   Part of the problem with controlling privacy and content on social media is that it is a medium operates very differently than any other form of communication, for several reasons. First, I argue that the very scale is completely unprecedented. No social group or online forum will have millions and tens of millions of members. Thousands, tens of thousands, of people at a time may see tweets in a trending tag. If a celebrity with millions of followers shares your post, suddenly you have that massive spotlight on you for better or worse. Viral tweets can be highlighted on morning news shows and major blogs. It's easy for any individual person to suddenly accrue a massive quantity of attention. 
+   
+   This scale means that behavior that would be unpleasant, but tolerable, becomes completely overwhelming. If one person misunderstands something you said and "helpfully" corrects you, then it can be annoying but what about when it's suddenly dozens or hundreds of people saying the same thing in a few minutes? If one person decides they don't like you, it's not pleasant but it's a familiar experience we've learned how to deal with since childhood. When you become the enemy of thousands, though, it's like nothing we've experienced before.
+
+(to finish) 
 * Separating Permissions
+In this section we're going to discuss how permissions generally work in operating systems and how we can apply the idea of permissions to social media in general. We'll be building up to an argument that we need some form of fine grained permissions on posts, much as we'd have for resources such as memory and files in an operating system, rather than the current all-or-nothing approach to interacting with content in your timeline. 
 ** Permissions in Operating Systems 
+   In any operating system, there's a notion of "permissions" on most resources: these permissions determine what entities are allowed to do with these resources, where by entities we mean both users and other programs. 
+
+   The easiest example comes from file systems. If you go into any unix-derived operating system's terminal and type "ls -l" you'll see a detailed list of all the files /and/ the permissions associated with them. There's three different kinds of permission to any file: read, write, and execute. Read and write are fairly straight forward, but execute is a little more subtle. The execute permissions both acts to restrict the ability to run a file as an executable and, in the case of directories, the ability to enter the directory. These permissions also exist in relation to memory in Linux. For example, you can map memory and set its permissions to some combination of read, write, and execute. 
 ** Permissions in Social Media
+   In social media, generally the ability to see a post gives you all forms of access to it. You're able to read the content, obviously, but you're also able to reblog/retweet/share it, comment on it, reply to it, etc. 
+   
+   This is like if we'd had a file system where the only two permissions were nothing at all or read/write/execute, e.g. if the only two allowed settings for chmod were 000 and 777.
+
+   There are clearly quite a few different /kinds/ of permission that we can imagine in a social network. Among them are things such as
+
+   + The ability to see a post
+   + The ability to share a post
+   + The ability to share a post with commentary
+   + The ability to reply to a post
+   + The ability to reply to a post you were tagged in
+
+These are clearly different ways to interact with content, but in general social media sites conflate all of them together. 
+
+It would already be a massive improvement to control over your own content if you could parcel out these permissions as you wanted them. You don't necessarily want everyone who sees a post to be able to share it. You don't necessarily want everyone who can share a post to add their own words onto it [fn:1]. You don't necessarily want people to reply to a post or to enter a conversation that they weren't invited to be part of. 
+** Assigning Permissions
+   Having separate permissions on content isn't useful unless there's a reasonable way to assign them. For a small closed system you could, albeit tediously, choose what the permissions of each individual user were in relation to each post. Obviously, for a large open system with a variety of users this isn't even possible. There needs to be some criterion for choosing who has what form of access.
+
+   The most obvious approach follows what's called /role based access control/. Role based access control is a concept we're all fairly familiar with in one form or another. When different groups of users on a rdbms have different access to the databases in the system, that's a type of role-based access control. 
+
+   Groups in linux, such as wheel, are another form of role based access control. If you belong to the group you have certain permissions, such as the ability to run the ~su~ and ~sudo~ commands. 
+
+   Even in many workplaces different jobs will come with different software access and ownership over files. 
+
+   Facebook is the social network that comes closest to having a role-based access, with its custom filters on who can see posts. Google+'s circles were even closer, but the platform is now defunct. 
+
+   Facebook, though, still only has an all-or-nothing approach to privacy: if you can see it, you can do anything else with it.
+
+   It wouldn't be hard to imagine, though, a system where you could set up Facebook like groups and then choose what the permissions on your post are for each of these groups by default, with the ability to override your defaults on each individual post. This would, already, be a massive improvement in terms of controlling content than the current state of the art.
+
+   There's still a major problem, though: sharing content, i.e. sharing, retweeting, reblogging. When a post is shared, whose permissions matter? The sharer? The original poster? The least intersection of the two? 
+
+   Let's consider these options in turn. First, if the sharer's permissions are what take primacy then it's too easy to break the web of trust. Let's say that I make a post and I allow you to share it from me. I'm a paranoid person who's nervous about letting people see my, say, elaborate macrame displays [fn:2]. You haven't a macrame care in the world, so you share in a way that completely leaves my post open to the public with all possible permissions intact. This is obviously *not* what I would want.
+
+  Consider instead if it's the original poster's choices that take absolute priority. If this is the case, then the problem happens in reverse. Perhaps I want my post to be seen by everyone and allow them to interact with it in every possible way, but you want to share it and only have a few people see it or ensure that your macrame hating aunt doesn't take this as an opportunity to add a rant to what was a very nice post. 
+
+  What, then, about some kind of intersection of policies or other way to resolve this conflict? The theoretical solution that has a lot of appeal is taking a kind of least-common-denominator of the permissions, a kind of intersection of who-has-what access. This would ensure that neither policy can be violated, but it adds several difficulties: you cannot easily predict what will happen when you share a post. There's no obvious way you can know who of your followers will be able to interact with the post. This is obviously undesireable from a user-interface perspective, but it also complicates our notion of role-based access: suddenly our notion of permissions needs to be attached to the state of the post as it is being shared. We need to more or less trace through the post as it is being passed around, keeping some form of meta-data with it.
+
+  That's not necessarily a bad idea! In fact, it's rather similar to the notion of capabilities in operating system security. If we invert the normal view of permissions on content being relationships between you as a user and other users and, instead, view the permissions as meta-data that belongs on a kind of "pointer" to the content then we can come up with an even more general and novel way to control the flow of information through a social network. 
 * Capabilities
 ** In Operating Systems
 ** Posts as Capabilities
 * A Rough Design
 
+* Footnotes
+
+[fn:2] Obviously macrame isn't really something I'd be concerned about, but let's just let it stand for all the things that someone might want to have extra control over: their religion, their sexuality, their politics, their posts about their exes, etc. 
+
+[fn:1] A recent example of this was that I saw someone with many followers share news about a friend's death and then a large number of people piled on in reblogs to interject their own personal politics and turn this /announcement of someone's death/ into a debate. It was probably one of the more infuriatingly inappropriate uses of reblogs that I've seen.
