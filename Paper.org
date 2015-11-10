@@ -109,9 +109,49 @@ It would already be a massive improvement to control over your own content if yo
 
   That's not necessarily a bad idea! In fact, it's rather similar to the notion of capabilities in operating system security. If we invert the normal view of permissions on content being relationships between you as a user and other users and, instead, view the permissions as meta-data that belongs on a kind of "pointer" to the content then we can come up with an even more general and novel way to control the flow of information through a social network. 
 * Capabilities
-** In Operating Systems
-** Posts as Capabilities
+Capabilities in operating systems are, essentially, a special pointer to a resource with meta-data attached describing how the resource can be used. There's details about how these capabilities are issued, managed, and made unforgeable that aren't relevant to what we want for social media.
+
+The basic idea is that the resource, be it a file handle or a memory location or another process's ID, comes with a description of what you're allowed to do with it if you have it. If it's a file handle you may be able to read from it, write to it, etc. but *also* there's the question of whether you're able to pass the capability along to another process and even whether you can change its permissions when you do so.
+
+In the context of social media, we can think of your timeline/dash/feed as being the "set" of "pointers" you currently have. If we pair these pointers with a various permissions then we can think of them as being a kind of capability. If you share a post, this is like sharing the pointer with all of your followers. Pushing the analogy further we can expand the notion of permissions attached to a post as consisting of both the old permissions we already discussed
+
+   + The ability to share a post
+   + The ability to share a post with commentary
+   + The ability to reply to a post
+   + The ability to reply to a post you were tagged in
+
+to also include 
+   
+   + The ability to change the permissions on a post
+
+This ability to change permissions is going to be how we resolve the earlier problem with our role-based access. When a post is shared its permissions will not change unless they have been changed by the sharer, and they can only be changed by the sharer when they themselves have the permission to do so.
+
+There's still an issue of /how/ these capabilities are issued. Capabilities can be issued in accordance with policy but they are not, in and of themselves, policy. For the policy we can appeal to something that looks a lot like the role-based approach above. This time, though, the point of the roles is for how the capabilities are issued when a follower accesses their dash. 
+
+Finally, capabilities in OS security often have the property of being "revokable". There's no reason why we shouldn't also consider posts as revokable. Both Twitter and Tumblr keep track of the tree for who is sharing a post from whom. A user should have the ability to prune the sharing tree at any point when a post has been shared from them, cutting it out of the timelines for all those other users.
+
+I believe this will allow us to better implement the principle of least privilege: that the entities of a system have exactly enough permissions to accomplish the intended policy and no more. In more social media terms, I think this can be restated as: every post should have exactly enough permissions on it to be spread and interacted with as the author intends and no more.
 * A Rough Design
+In this section I'll be laying out my rough idea for how a social network constructed along these lines would work, with proposed features and examples of usage.
+** Features  
+Once we accept the idea of permissions as belonging to the post there are a number of other interesting things we can include in terms of privacy and content control.
+
+First, let's imagine that we have a system of tags more akin to Tumblr: the tags are separate data on each sharing of the post. We could include a permission on posts that determines whether or not it can be "obtained" through tag searches. Now, your first thought might be that a post being invisible in tags doesn't have any use, but on Tumblr tags are often used to organize your posts *for yourself*. This could allow us to avoid the problem of having to make up strange new tags in order to simultaneously organize your notes for yourself without necessarily sharing posts in ways you don't want. Tumblr already has the ability to make *all posts* tag unsearchable, but that's the kind of all-or-nothing solution that we're trying to avoid here.
+
+Second, let's go into details on what it might mean to have permission-to-change-permissions. I think a very useful yet simple way to implement it is to have three settings for this permission: the ability to change all permissions on the post, the ability to upgrade permissions to more restrictive, and no ability to change the permissions of the post. The middle setting, the ability to make permissions more restrictive, would be a nice way to make sure that as the content is spread it's settings are /at least/ as restricted as what you've chosen to allow, which helps resolve the conflict we identified above of conflicting privacy policies between different users.
+
+Next, we haven't addressed blocking users til now. I've been assuming that any social network that implemented a notion of privacy like this one would have some kind of strong block feature which would be a complete ban of another user from ever being able to message or interact with . One potentially interesting, though perhaps infeasible, solution would be to keep around an extra bit of data with the capability: the per-post block list. At every point in the sharing tree, the post would "accumulate" the block lists of each person who shares it. The *disadvantage* of this approach is that it means sharing the post through a different chain would be visible to different people. In a sense I'd be willing to accept that "non-commutativity" given that different versions of posts may have different tags or commentary or lead to a different set of users receiving notifications in any case, sharing through different paths in the tree has never led to the exact same post. 
+
+Finally, there are a number of other odd little things that I could see some kind of use for but wouldn't be major features, such as "self-destructing" posts whose permissions change after a certain date or including a limit on a post for how far away from the original it can be shared before its permissions change. 
+
+** Use Cases
+Let's consider a few cases that users might find themselves needing and discuss how a system following the rough sketch of features above would be able to implement those privacy policies
+
+First, imagine that you see a post that you want to comment on, perhaps to correct the original poster, but you want to make sure that no one else piles on from your followers. If you downgrade the permissions so it can no longer be shared with additional commentary, then you can safely prevent further attacks.
+
+Next, imagine that you're making an announcement on a serious topic. You want to let your followers know about something but *only* your followers. You can make the post unshareable and unreplyable to all.
+
+(to finish)
 
 * Footnotes
 
