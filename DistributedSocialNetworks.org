@@ -1,0 +1,11 @@
+#+TITLE: A Distributed Social Network
+#+AUTHOR: Clarissa Littler
+
+* Introduction
+  In this somewhat informal note I'll be sketching out my plan for some notion of distributed social network. Part of what will be contained herein is just trying to figure out what even such a thing is.
+** Motivation
+   The fundamental idea is that I'm an anxious untrusting person who feels uncomfortable with private entities controlling social networks given how important they are. I don't even trust myself to be in charge of such a thing. I think it's best for everyone involved if there could be a way to run a completely peer-to-peer social network, at least when it comes to control over content and its storage. 
+
+How would such a thing work and what would its protocols be? At the moment, my guess is only slightly better than yours.
+** Goals
+   
