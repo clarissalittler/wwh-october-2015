@@ -12,6 +12,31 @@ How would such a thing work and what would its protocols be? At the moment, my g
 * Sketch of a Sketch of an Idea
   The rough idea is that there will be no centralized servers to the network at all. Instead, posts are going to be distributed on all the devices in the system. Now, there's some obvious concerns with that idea: how is the data going to be distributed if it's entirely peer-to-peer instead of centrally controlled.
 
-  The hope is to steal the idea behind famous p2p systems such as bit torrent and the grandmother of them all, Napster, and actually share the data between peers.
+  The hope is to steal the idea behind famous p2p systems such as bit torrent and the grandmother of them all, Napster [fn:1], and actually share the data between peers.
 
   This ties in with the notion of posts-as-capabilities that I've also been writing about in this repository, taken in a different direction. To possess a post is to have the data and some kind of unforgeable metadata that lists the ways the data may be used, which involves how it may be shared and what its permissions are once shared.
+
+All the posts a device is holding onto is its "working set", which are all the posts that the owner of the device can read. 
+
+Whether the posts in the working set can be retrieved by other users who are following them is entirely dependent on the permissions on the post. If it is set to shared then it can be requested. In order to mimic the way that reblogging/retweeting works all posts are going to be set to non-sharead by default. If the permission on the post allows it to be set to shareable then, shockingly, this will mean it can be mark as shared. Similarly, if the permissions on post allow for it to be commented on when it is made shareable, then you have that option, etc. 
+** Finding and Connecting Users
+   Now one of the biggest challenges for a distributed architecture like this would be having the users find each other. The obvious solution is to have something like bittorrent's tracker servers: users can find each other and follow each other that way. The glue servers wouldn't actually contain any of the content, only information about users possibly classified by topics they self-report as posting about. 
+
+   Of course, the bittorrent model of tracking really only makes sense when it's the data you're trying to get and not specific peers you're attempting to track. That complicates things quite a bit because you need some way of linking the peers together at various points. Do we have the tracking servers keep updating some kind of IP link between IDs and users? I really dislike that idea from a privacy perspective but the only other option I see is to piggyback on SMS as identification. 
+
+   It's absolutely necessary though that any server running a proper protocol can be used as a glue server. If we end up centralizing any part of the apparatus then we hit the exact problem that we're trying to avoid. In terms of keeping servers synchronized it might be helpful to look at what the diaspora project ended up doing. 
+** Sending Data
+   There's a number of questions on how data will be transmitted. Now, for a truly distributed system I can't see push as being a reasonable approach, because who is going to do the pushing? On the other hand, latency will inherently be high if it's purely a pull-when-opened. Perhaps there can be a way to have periodic background pull requests without completely consuming the data of the device, a polling for data every few minutes/half hour/hour.
+** Replies and blocks
+   Replies are interesting in a distributed system like this. The most natural notion of "commenting" is going to be adding commentary onto the share much like a reblog. Old-tumblr replies are a bit more like having a list of comments attached to the post and carried around with it. Unlike old-tumblr, there can't be a completely synchronized set of all replies because not everyone is going to have a complete set of data. That's sorta the idea, even.
+
+   There's two notions of blocking:
+   + blocked access to content
+   + blocked from replies
+
+Blocking access from content will probably involve per-post block lists as outlined in my note on capabilities for social networks. In this case, the posts as they're distributed will accumulate block data that maps to IDs of the users.
+** User IDs
+   
+* Footnotes
+
+[fn:1] Alright, so Napster had very centralized servers for keeping track of data which we're going to try to avoid *but* I think there's still a lot to be learned about organizing data between peers from all these old examples.
