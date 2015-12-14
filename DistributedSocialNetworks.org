@@ -8,4 +8,10 @@
 
 How would such a thing work and what would its protocols be? At the moment, my guess is only slightly better than yours.
 ** Goals
-   
+   I think my fundamental goal at the moment is to sketch out what a distributed social network would even look like.
+* Sketch of a Sketch of an Idea
+  The rough idea is that there will be no centralized servers to the network at all. Instead, posts are going to be distributed on all the devices in the system. Now, there's some obvious concerns with that idea: how is the data going to be distributed if it's entirely peer-to-peer instead of centrally controlled.
+
+  The hope is to steal the idea behind famous p2p systems such as bit torrent and the grandmother of them all, Napster, and actually share the data between peers.
+
+  This ties in with the notion of posts-as-capabilities that I've also been writing about in this repository, taken in a different direction. To possess a post is to have the data and some kind of unforgeable metadata that lists the ways the data may be used, which involves how it may be shared and what its permissions are once shared.
