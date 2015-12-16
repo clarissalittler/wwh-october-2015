@@ -35,8 +35,15 @@ Whether the posts in the working set can be retrieved by other users who are fol
    + blocked from replies
 
 Blocking access from content will probably involve per-post block lists as outlined in my note on capabilities for social networks. In this case, the posts as they're distributed will accumulate block data that maps to IDs of the users.
+
+How does revocation work, though? At the moment I can say that research has already been done on revocation for distributed systems so I wouldn't be surprised if this is either a solved problem or at the very least there are partial solutions we can build on.
+
+My first guess, though, is that a revocation systems would somehow have to put out updates which would then be pulled by the other "following" devices. When the revocation system is on a device it's automatically going to be pulled by anyone who pulls from the device and, if the revocation applies to the device then it will remove the message and leave behind another message to tell everyone who pulls from them that the message needs to be deleted and a copy of the same message needs to left behind for sharing.
+
+** Overlapping Messages
+
 ** User IDs
-   
+
 * Footnotes
 
 [fn:1] Alright, so Napster had very centralized servers for keeping track of data which we're going to try to avoid *but* I think there's still a lot to be learned about organizing data between peers from all these old examples.
