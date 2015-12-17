@@ -41,10 +41,23 @@ How does revocation work, though? At the moment I can say that research has alre
 My first guess, though, is that a revocation systems would somehow have to put out updates which would then be pulled by the other "following" devices. When the revocation system is on a device it's automatically going to be pulled by anyone who pulls from the device and, if the revocation applies to the device then it will remove the message and leave behind another message to tell everyone who pulls from them that the message needs to be deleted and a copy of the same message needs to left behind for sharing.
 
 ** Overlapping Messages
-   What happens if you receive the same message from multiple sources? Now my first instinct was "keep them all and let God sort it out" but that's a terrible idea, I think, because then anyone who pulls from you is going to get those multiple copies. That could be really bad if you had the equivalent of a viral post that everyone spreads quickly, as it could lead to many many copies of the same post appearing. Instead, it should really just be one that is left. The one that remains should, I think, be the one with the most permissive permissions.
+   What happens if you receive the same message from multiple sources? Now my first instinct was "keep them all and let God sort it out" but that's a terrible idea, I think, because then anyone who pulls from you is going to get those multiple copies. That could be really bad if you had the equivalent of a viral post that everyone spreads quickly, as it could lead to many many copies of the same post appearing. Instead, it should really just be one that is left. The one that remains should, I think, be the one with the most permissive permissions. 
+
+If the message with the most permissive permissions wins, then this implies that we need to have a total (partial?) ordering on permissions. The only question is about block lists, because should block lists only be comparable
+  + by a subset relation OR
+  + by the *size* of the block lists OR
+  + are the block lists always incomparable if different
+
+There's pros and cons to all of these but obviously there needs to be some kind of clear semantics. The advantage of the subset relation is that it has the clearest most predictable semantics while still allowing culling based on block lists. 
 
 ** User IDs
+   Another large problem is how devices are tracked. Again, if we're not piggybacking on sms and yet we want to have some notion of proper user IDs then we...?
 
+   Okay, this part is going to be even more sketchy than the rest of this note.
+
+   First off, what about timestamps to generate IDs? Looking online it seems fairly clear that this is a common solution: take some form of MAC address and combine it with a number of bits that come from the universal time on the device. Can we programmatically access the MAC address on a mobile device?
+** Unforgeable Capabilities
+   One of the many things I'm still ignorant on is how to make sure the capabilities are unforgeable. What does that mean in this context?
 * Footnotes
 
 [fn:1] Alright, so Napster had very centralized servers for keeping track of data which we're going to try to avoid *but* I think there's still a lot to be learned about organizing data between peers from all these old examples.
