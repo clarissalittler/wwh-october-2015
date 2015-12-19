@@ -58,6 +58,12 @@ There's pros and cons to all of these but obviously there needs to be some kind 
    First off, what about timestamps to generate IDs? Looking online it seems fairly clear that this is a common solution: take some form of MAC address and combine it with a number of bits that come from the universal time on the device. Can we programmatically access the MAC address on a mobile device?
 ** Unforgeable Capabilities
    One of the many things I'm still ignorant on is how to make sure the capabilities are unforgeable. What does that mean in this context?
+** Use Cases
+   In order to really pursue this project, we need to establish *why* we want it in the first place.
+
+   To play the devil's advocate on my own terms, this is definitely a system that is going to add a lot of complexity to the normal social media experience. It won't update quite as fast, it won't have a centralized way to follow people, and having a consistent identity over multiple devices is going to be rather complicated.
+
+   Why, then, should we even bother? Well, the main idea is for us all to collectively do the heavy lifting of storing and controlling our collective data. But *why*? Part of it is just the raw anxiety of having companies like twitter or tumblr or facebook control our information. Another part is that I just flat out like the idea of a social network that inherently is non-monetizable. I don't want an advertising platform. That's ideological twaddle, though. Are there any practical things?
 * Footnotes
 
 [fn:1] Alright, so Napster had very centralized servers for keeping track of data which we're going to try to avoid *but* I think there's still a lot to be learned about organizing data between peers from all these old examples.
