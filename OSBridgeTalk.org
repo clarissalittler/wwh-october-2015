@@ -1,0 +1,39 @@
+#+startup: beamer
+#+TITLE: Social Networks and Privacy Models
+#+AUTHOR: Clarissa Littler
+#+OPTIONS: H:2
+#+latex_header: \mode<beamer>{\usetheme{Madrid}}
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [bigger]
+
+* Introduction
+** What we'll be covering
+   + Outlining problems with privacy and content control \pause
+   + Describe how current solutions are lacking \pause
+** What we're not covering
+   + A fully implementable design \pause
+   + How to make our proposal performant \pause
+     + Premature optimization $= \sqrt{evil}$ \pause
+   + How to solve all privacy and content control problems \pause
+   + How to prevent another 2014
+* The Problem With Privacy
+** Safety on the internet
+** What privacy features we want
+** What social media gives us
+** 
+* Social Contracts and Offline Conversations
+** Privacy offline
+** Social contracts and enforcement
+
+* Why Is The Internet Different?
+** Anonymity
+** Scaling
+** Rapidity
+** Inentives and social contracts
+* Capabilities and Operating Systems
+** 
+* What Could Social Networks Be?
+** Posts as capabilities
+** 
+* Conclusions and Open Questions
+** 
