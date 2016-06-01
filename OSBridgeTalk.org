@@ -6,6 +6,8 @@
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [bigger]
 
+* Meta notes							   :noexport:
+** General notes
 * Introduction
 ** What we'll be covering
    + Outlining problems with privacy and content control \pause
@@ -16,24 +18,73 @@
      + Premature optimization $= \sqrt{evil}$ \pause
    + How to solve all privacy and content control problems \pause
    + How to prevent another 2014
+** Definitions of terms
+   + Social network \pause
+   + Post \pause
+   + Sharing \pause
+   + Commenting \pause
+   + Conversing \pause
+   + Replying
 * The Problem With Privacy
 ** Safety on the internet
+*** My position
+    Everyone should have the right to participate in the public internet without fear of harassment either online or off.
+** What should privacy mean in social media?
+*** 
+    Having control over your content: both who can see it, how they can interact with it, and what happens when its shared.
 ** What privacy features we want
 ** What social media gives us
-** 
+** Facebook
+** Twitter
+** Tumblr
+** Why it's not enough
 * Social Contracts and Offline Conversations
 ** Privacy offline
-** Social contracts and enforcement
+*** 
+** Face-to-face conversations
 
+** Hackathons
+** Interrupting strangers
+[[file:bench-people-smartphone-sun.jpg][file:~/projects/wwh-october-2015/bench-people-smartphone-sun.jpg]]
+** Public but inaccessible
+*** 
+    You can witness conversations without having expectation of being able to participate or 
+    interact with them. There's no expectation that you should be on even footing with all participants.
+** Fine grained social permissions
+*** 
+    + Many nuanced situations offline \pause
+    + Public but inaccessible has little analogue in social meda \pause
+    + Expectation of how information will flow
+** Social contracts and enforcement
+    + How do we stop poor behavior? \pause
+    + Social not legal consequences \pause
+    + Being cut off from friends is meaningful
 * Why Is The Internet Different?
 ** Anonymity
-** Scaling
+   
+** Scaling   
+[[file:letters-286541_960_720.jpg][file:~/projects/wwh-october-2015/letters-286541_960_720.jpg]]
 ** Rapidity
-** Inentives and social contracts
-* Capabilities and Operating Systems
+** Incentives and social contracts
+*** Why do we behave?
+    We don't treat people appropriately  
+** My thesis
+*** 
+    There should not be a fundamental difference between online and offline interactions in terms of expectations of privacy and information control.
+* Operating Systems and Security
+** What are capabilities?
+   + Protected pointers to resources \pause
+   + 
+** Capabilities in operating systems
 ** 
 * What Could Social Networks Be?
+** Permissions
 ** Posts as capabilities
+** Timelines as working sets
 ** 
 * Conclusions and Open Questions
-** 
+** What we've covered
+** What could be
+** Analysing incentives
+** Next steps
+** Questions?
