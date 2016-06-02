@@ -34,16 +34,26 @@
     Having control over your content: both who can see it, how they can interact with it, and what happens when its shared.
 ** What privacy features we want
 ** What social media gives us
-** Facebook
-** Twitter
-** Tumblr
+** Privacy on Facebook
+** Privacy on Twitter
+   + Blocking \pause
+   + Locking down \pause
+   + ... \pause
+   + No, really, *that's it*
+** Privacy on Tumblr 
 ** Why it's not enough
 * Social Contracts and Offline Conversations
 ** Privacy offline
+   + Offline privacy is subtle and nuanced \pause
+   + Social graph is more controlled \pause
+   + "Don't tell Clarissa but..." \pause
+   + "Well it's not official yet..." 
+** In a restaurant
+[[file:Charmers_Cafe_patrons.jpg][file:~/projects/wwh-october-2015/Charmers_Cafe_patrons.jpg]]
 *** 
-** Face-to-face conversations
-
+By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons   
 ** Hackathons
+[[file:6134568134_986f3a1339_b.jpg][file:~/projects/wwh-october-2015/6134568134_986f3a1339_b.jpg]]
 ** Interrupting strangers
 [[file:bench-people-smartphone-sun.jpg][file:~/projects/wwh-october-2015/bench-people-smartphone-sun.jpg]]
 ** Public but inaccessible
@@ -61,10 +71,11 @@
     + Being cut off from friends is meaningful
 * Why Is The Internet Different?
 ** Anonymity
-   
+[[file:tumblr_static_tumblr_mqv2i1x85c1s5jjtzo1_500.png][file:~/projects/wwh-october-2015/tumblr_static_tumblr_mqv2i1x85c1s5jjtzo1_500.png]]   
 ** Scaling   
 [[file:letters-286541_960_720.jpg][file:~/projects/wwh-october-2015/letters-286541_960_720.jpg]]
 ** Rapidity
+
 ** Incentives and social contracts
 *** Why do we behave?
     We don't treat people appropriately  
@@ -74,14 +85,27 @@
 * Operating Systems and Security
 ** What are capabilities?
    + Protected pointers to resources \pause
-   + 
+   + A pointer with permissions \pause
+   + Both a way to access... \pause
+   + And a way to control access 
 ** Capabilities in operating systems
+   + Example: pointer to a file \pause
+     + Read \pause
+     + Write \pause
+     + Execute \pause
+     + /Share/ \pause
+     + /Change permissions/
 ** 
 * What Could Social Networks Be?
 ** Permissions
+   + Reply \pause
+   + Share \pause
+   + Share with comment \pause
+   + Change permissions
 ** Posts as capabilities
 ** Timelines as working sets
-** 
+   
+** Permissions and sharing
 * Conclusions and Open Questions
 ** What we've covered
 ** What could be
