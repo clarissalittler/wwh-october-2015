@@ -1,7 +1,7 @@
 #+startup: beamer
 #+TITLE: Social Networks and Privacy Models
 #+AUTHOR: Clarissa Littler
-#+OPTIONS: H:2
+#+OPTIONS: H:2 toc:nil
 #+latex_header: \mode<beamer>{\usetheme{Madrid}}
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [bigger]
@@ -35,13 +35,23 @@
 ** What privacy features we want
 ** What social media gives us
 ** Privacy on Facebook
+   + Most flexible \pause
+   + Can choose who can see (or can't see) posts \pause
+   + Can lock down personal information selectively
+** Privacy on Tumblr
+   + Blocking \pause
+   + Being visible only to logged in users \pause
+   + Being unsearchable
 ** Privacy on Twitter
    + Blocking \pause
    + Locking down \pause
    + ... \pause
    + No, really, *that's it*
-** Privacy on Tumblr 
 ** Why it's not enough
+   + Can control who /sees/ posts \pause
+   + ...but not how they interact with it \pause
+   + No revocation \pause
+   + "The Internet is Forever"
 * Social Contracts and Offline Conversations
 ** Privacy offline
    + Offline privacy is subtle and nuanced \pause
@@ -49,6 +59,7 @@
    + "Don't tell Clarissa but..." \pause
    + "Well it's not official yet..." 
 ** In a restaurant
+
 [[file:Charmers_Cafe_patrons.jpg][file:~/projects/wwh-october-2015/Charmers_Cafe_patrons.jpg]]
 *** 
 By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons   
@@ -57,9 +68,21 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
 ** Interrupting strangers
 [[file:bench-people-smartphone-sun.jpg][file:~/projects/wwh-october-2015/bench-people-smartphone-sun.jpg]]
 ** Public but inaccessible
-*** 
+\pause
+*** 								      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :END:
+**** 
     You can witness conversations without having expectation of being able to participate or 
-    interact with them. There's no expectation that you should be on even footing with all participants.
+    interact with them. 
+\pause
+*** 								      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :END:
+**** 
+    There's no expectation that you should be on even footing with all participants.
 ** Fine grained social permissions
 *** 
     + Many nuanced situations offline \pause
@@ -72,19 +95,18 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
 * Why Is The Internet Different?
 ** Anonymity
 [[file:tumblr_static_tumblr_mqv2i1x85c1s5jjtzo1_500.png][file:~/projects/wwh-october-2015/tumblr_static_tumblr_mqv2i1x85c1s5jjtzo1_500.png]]   
-** Scaling   
-[[file:letters-286541_960_720.jpg][file:~/projects/wwh-october-2015/letters-286541_960_720.jpg]]
-** Rapidity
-
+** Scaling and Rapidity
+[[file:popularpost.png][file:~/projects/wwh-october-2015/popularpost.png]]
 ** Incentives and social contracts
-*** Why do we behave?
-    We don't treat people appropriately  
+   + Being blocked isn't a disincentive \pause
+   + Groups are rapid forming and loose knit \pause
+   + "Stop whinging. It's the internet!"
 ** My thesis
 *** 
-    There should not be a fundamental difference between online and offline interactions in terms of expectations of privacy and information control.
+    There should not be a fundamental difference between online and offline interactions in terms of expectations of privacy and information control. [fn:1]
 * Operating Systems and Security
 ** What are capabilities?
-   + Protected pointers to resources \pause
+   + Unforgeable pointers to resources \pause
    + A pointer with permissions \pause
    + Both a way to access... \pause
    + And a way to control access 
@@ -95,20 +117,73 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
      + Execute \pause
      + /Share/ \pause
      + /Change permissions/
-** 
+** Capabilities aren't policy
+   + Capabilities are issued in /accordance/ with policy \pause
+   + Programs share responsibly \pause
+   + 
 * What Could Social Networks Be?
-** Permissions
-   + Reply \pause
-   + Share \pause
-   + Share with comment \pause
-   + Change permissions
+** Current Social Media
+   + Mostly all or nothing \pause
+   + No equivalent of public but inaccessible \pause
+   + All possible ways of interacting are lumped together
+** Role Based Access Control
+   + Control access by assigning roles \pause
+   + Groups in Linux \pause
+   + Databases \pause
+   + Permissions-by-job
+** Role Based in Social Media
+   + Facebook's custom groups \pause
+   + Google+'s circles \pause
+   + Dreamwidth/LJ custom groups \pause
+   + Still no disentangling of permissions
+** Permissions in Social Media (A First Pass)
+   + Seeing \pause
+   + Conversing \pause
+   + Replying \pause
+   + Sharing/Reblogging \pause
+   + Sharing w/ Comment
+** Role Based + Fine-Grained Permissions
+   + Massive improvement \pause
+   + Make it easier to protect data \pause
+   + Not the best though \pause
+     + When I share I "own" it
+** Focusing on Posts
+   + What if we focused on permissions attached to the post \pause
+   + Better enforceable policies \pause
+   + Principle of least privilege
+** Posts with metadata
+   + A post is /already/ content and metadata \pause
+   + Who retweeted it from whom \pause
+   + Reblogs and commentary of reblogs \pause
+   + Proposal: add permissions as metadata on posts
 ** Posts as capabilities
+*** The basic idea
+   Posts with permissions attached should be thought of as capabilities
 ** Timelines as working sets
-   
+   + To view a post is to be allowed to have the capability
+   + 
 ** Permissions and sharing
+** Revocation
+* New forms of permission
+** Self-destructing messages
+** Making policy
+* Use cases
+** Announcements
+** Preventing pile-on
+** Preventing harassment
+** Stymieing stalkers
 * Conclusions and Open Questions
 ** What we've covered
+   + Problems with privacy in solution media \pause
+   + 
 ** What could be
-** Analysing incentives
 ** Next steps
+** Analyzing incentives
+   + Analyzing social media game theoretically \pause
+   + Devise systems that disincentivize poor behavior \pause
+   + 
 ** Questions?
+{\Huge Any questions?}
+* Footnotes
+
+[fn:1] I'm not saying that social media isn't /different/, but I argue we don't have to give up privacy to have these differences
