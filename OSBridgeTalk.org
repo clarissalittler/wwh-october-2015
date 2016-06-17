@@ -12,6 +12,7 @@
 ** What we'll be covering
    + Outlining problems with privacy and content control \pause
    + Describe how current solutions are lacking \pause
+   + Present a different approach
 ** What we're not covering
    + A fully implementable design \pause
    + How to make our proposal performant \pause
@@ -42,7 +43,13 @@
    + No revocation \pause
    + Little control over interactions \pause
    + Sharing changes ownership \pause
-   + ...once shared, out of your hands
+   + Possession is 9/10 of the law
+** Review of social networks
+   + Reviewing privacy features \pause
+   + Three general networks \pause
+     + Facebook \pause
+     + Tumblr \pause
+     + Twitter
 ** Privacy on Facebook
    + Most flexible \pause
    + Can choose who can see (or can't see) posts \pause
@@ -61,15 +68,15 @@
    + Can control who /sees/ posts \pause
    + ...but not how they interact with it \pause
    + No revocation \pause
-   + "The Internet is Forever"
+     + "The Internet is Forever"
 * Social Contracts and Offline Conversations
 ** Privacy offline
    + Offline privacy is subtle and nuanced \pause
    + Social graph is more controlled \pause
-   + "Don't tell Clarissa but..." \pause
-   + "Well it's not official yet..." 
+     + "Don't tell Clarissa but..." \pause
+     + "Well it's not official yet..." 
+   + Social expectation
 ** In a restaurant
-
 [[file:Charmers_Cafe_patrons.jpg][file:~/projects/wwh-october-2015/Charmers_Cafe_patrons.jpg]]
 *** 
 By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons   
@@ -96,12 +103,14 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
 ** Fine grained social permissions
 *** 
     + Many nuanced situations offline \pause
-    + Public but inaccessible has little analogue in social meda \pause
-    + Expectation of how information will flow
+    + Public but inaccessible \pause
+    + Expectation of how information will flow \pause
+    + How is this enforced?
 ** Social contracts and enforcement
     + How do we stop poor behavior? \pause
     + Social not legal consequences \pause
-    + Being cut off from friends is meaningful
+    + Being cut off from friends is meaningful \pause
+    + Public humiliation is a powerful force
 * Why Is The Internet Different?
 ** Anonymity
 [[file:tumblr_static_tumblr_mqv2i1x85c1s5jjtzo1_500.png][file:~/projects/wwh-october-2015/tumblr_static_tumblr_mqv2i1x85c1s5jjtzo1_500.png]]   
@@ -110,11 +119,39 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
 ** Incentives and social contracts
    + Being blocked isn't a disincentive \pause
    + Groups are rapid forming and loose knit \pause
+   + Humiliation, where is thy sting? \pause
    + "Stop whinging. It's the internet!"
 ** My thesis
 *** 
     There should not be a fundamental difference between online and offline interactions in terms of expectations of privacy and information control. [fn:1]
-* Operating Systems and Security
+* Social Media and Permissions
+** How do we get there?
+   + Control interactions not just visibility \pause
+   + Social expectation set in policy
+** Permissions in social media
+*** What kinds of interaction?
+    \pause
+     + Sharing a post \pause
+       + Sharing with commentary \pause
+       + Sharing and changing tags \pause
+     + Replying to a post \pause
+     + Conversing on a post
+* Operating Systems and Social Networks
+** Role based access control
+   + Control access by assigning roles \pause
+   + Groups in Linux \pause
+   + Databases \pause
+   + Permissions-by-job
+** Role Based in Social Media
+   + Facebook's custom groups \pause
+   + Google+'s circles \pause
+   + Dreamwidth/LJ custom groups \pause
+   + Still no disentangling of permissions
+** Role Based + Fine-Grained Permissions
+   + Massive improvement \pause
+   + Make it easier to protect data \pause
+   + Not the best though \pause
+     + When I share I "own" it
 ** What are capabilities?
    + Unforgeable pointers to resources \pause
    + A pointer with permissions \pause
@@ -133,32 +170,11 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
 ** Principle of least privilege
 *** 
    Only give the privilege necessary to get the job done
-** Role based access control
-   + Control access by assigning roles \pause
-   + Groups in Linux \pause
-   + Databases \pause
-   + Permissions-by-job
 * What Could Social Networks Be?
 ** Current Social Media
    + Mostly all or nothing \pause
    + No equivalent of public but inaccessible \pause
    + All possible ways of interacting are lumped together
-** Role Based in Social Media
-   + Facebook's custom groups \pause
-   + Google+'s circles \pause
-   + Dreamwidth/LJ custom groups \pause
-   + Still no disentangling of permissions
-** Permissions in Social Media (A First Pass)
-   + Seeing \pause
-   + Conversing \pause
-   + Replying \pause
-   + Sharing/Reblogging \pause
-   + Sharing w/ Comment
-** Role Based + Fine-Grained Permissions
-   + Massive improvement \pause
-   + Make it easier to protect data \pause
-   + Not the best though \pause
-     + When I share I "own" it
 ** Focusing on Posts
    + What if we focused on permissions attached to the post \pause
    + Better enforceable policies \pause
@@ -218,7 +234,6 @@ Post-centered thinking leads to new kinds of control over your posts.
 ** Announcements
 ** Preventing pile-on
 ** Preventing harassment
-** Stymieing stalkers
 * Conclusions and Open Questions
 ** What we've covered
    + Problems with privacy in social media \pause
