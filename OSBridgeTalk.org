@@ -1,49 +1,53 @@
 #+startup: beamer
-#+TITLE: Social Networks and Privacy Models
+#+TITLE: Social Networks, Privacy, and Information Flow
 #+AUTHOR: Clarissa Littler
 #+OPTIONS: H:2 toc:nil
-#+latex_header: \mode<beamer>{\usetheme{Madrid}}
+#+latex_header: \usetheme{Berkeley}
+#+latex_header: \usecolortheme{beetle}
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [bigger]
 
-* Meta notes							   :noexport:
-** General notes
 * Introduction
 ** What we'll be covering
    + Outlining problems with privacy and content control \pause
    + Describe how current solutions are lacking \pause
-   + Present a different approach
+   + Discuss offline vs. online social interactions \pause
+   + Present a different approach to social networks
 ** What we're not covering
    + A fully implementable design \pause
    + How to make our proposal performant \pause
      + Premature optimization $= \sqrt{evil}$ \pause
-   + How to solve all privacy and content control problems \pause
-   + How to prevent another 2014
-** Definitions of terms
+   + How to solve all privacy and content control problems
+** Definitions of some terms
    + Social network \pause
    + Post \pause
    + Sharing \pause
-   + Commenting \pause
+   + Sharing with comments \pause
    + Conversing \pause
    + Replying
 * The Problem With Privacy
 ** Safety on the internet
 *** My position
-    Everyone should have the right to participate in the public internet without fear of harassment either online or off.
+    Everyone should have the right to participate in the public internet without fear of harassment either online or off
 ** What should privacy mean in social media?
-***  
-    Having control over your content: both who can see it, how they can interact with it, and what happens when its shared.
+*** Information flow as generalized privacy
+    \pause
+    Having control over your content: both who can see it, how they can interact with it, and what happens when its shared
 ** What privacy features we want
    + Fine grained control over visibility \pause
    + ... and over allowed *interaction* \pause
-   + Sharing respects *your* preferences \pause
-   + Choose when you become viral
+   + Sharing respects *your* preferences
+** What privacy features we want
+   + Choose when you become viral \pause
+   + Choose when you want comments \pause
+   + Choose who can share \pause
+   + ...
 ** What social media gives us
    + Limited control over visibility \pause
    + No revocation \pause
    + Little control over interactions \pause
    + Sharing changes ownership \pause
-   + Possession is 9/10 of the law
+     + Possession is 9/10 of the law
 ** Review of social networks
    + Reviewing privacy features \pause
    + Three general networks \pause
@@ -68,13 +72,14 @@
    + Can control who /sees/ posts \pause
    + ...but not how they interact with it \pause
    + No revocation \pause
-     + "The Internet is Forever"
+     + "The Internet is Forever" \pause
+   + No general flow control
 * Social Contracts and Offline Conversations
 ** Privacy offline
    + Offline privacy is subtle and nuanced \pause
    + Social graph is more controlled \pause
      + "Don't tell Clarissa but..." \pause
-     + "Well it's not official yet..." 
+     + "Well it's not official yet..." \pause
    + Social expectation
 ** In a restaurant
 [[file:Charmers_Cafe_patrons.jpg][file:~/projects/wwh-october-2015/Charmers_Cafe_patrons.jpg]]
@@ -84,22 +89,17 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
 [[file:6134568134_986f3a1339_b.jpg][file:~/projects/wwh-october-2015/6134568134_986f3a1339_b.jpg]]
 ** Interrupting strangers
 [[file:bench-people-smartphone-sun.jpg][file:~/projects/wwh-october-2015/bench-people-smartphone-sun.jpg]]
+** Lectures
+[[file:CherryLectern.jpg][file:~/projects/wwh-october-2015/CherryLectern.jpg]]
 ** Public but inaccessible
-\pause
-*** 								      :BMCOL:
-    :PROPERTIES:
-    :BEAMER_col: 0.4
-    :END:
-**** 
+*** 
     You can witness conversations without having expectation of being able to participate or 
     interact with them. 
 \pause
-*** 								      :BMCOL:
-    :PROPERTIES:
-    :BEAMER_col: 0.4
-    :END:
-**** 
-    There's no expectation that all participants are on even footing.
+*** 
+    #+LaTeX: {\Large
+    *There's no expectation that all participants are on even footing.*
+    #+LaTeX: }
 ** Fine grained social permissions
 *** 
     + Many nuanced situations offline \pause
@@ -112,9 +112,12 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
     + Being cut off from friends is meaningful \pause
     + Public humiliation is a powerful force
 * Why Is The Internet Different?
+** What's different about social media?
+***    
+    Why isn't social media like older forms of communication?
 ** Anonymity
 [[file:tumblr_static_tumblr_mqv2i1x85c1s5jjtzo1_500.png][file:~/projects/wwh-october-2015/tumblr_static_tumblr_mqv2i1x85c1s5jjtzo1_500.png]]   
-** Scaling and Rapidity
+** Scaling and rapidity
 [[file:popularpost.png][file:~/projects/wwh-october-2015/popularpost.png]]
 ** Incentives and social contracts
    + Being blocked isn't a disincentive \pause
@@ -123,31 +126,39 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
    + "Stop whinging. It's the internet!"
 ** My thesis
 *** 
-    There should not be a fundamental difference between online and offline interactions in terms of expectations of privacy and information control. [fn:1]
+    There should not be a fundamental difference between online and offline interactions in terms of expectations of privacy and information control. 
 * Social Media and Permissions
+** Current social media
+   + Mostly all or nothing \pause
+   + No equivalent of public but inaccessible \pause
+   + All possible ways of interacting are lumped together
 ** How do we get there?
-   + Control interactions not just visibility \pause
-   + Social expectation set in policy
+   + Control interaction and flow not just visibility \pause
+   + Social expectation must be set in policy
 ** Permissions in social media
 *** What kinds of interaction?
     \pause
      + Sharing a post \pause
        + Sharing with commentary \pause
        + Sharing and changing tags \pause
-     + Replying to a post \pause
-     + Conversing on a post
-* Operating Systems and Social Networks
+     + Conversing on a post \pause
+     + Replying to a post
+* Assigning permissions in operating systems and social networks
+** Who gets these permission?
+   + Policy controls permissions \pause
+   + How do we set policy \pause
+   + How do policy and sharing interact?
 ** Role based access control
    + Control access by assigning roles \pause
    + Groups in Linux \pause
    + Databases \pause
    + Permissions-by-job
-** Role Based in Social Media
+** Role based in social media
    + Facebook's custom groups \pause
    + Google+'s circles \pause
    + Dreamwidth/LJ custom groups \pause
    + Still no disentangling of permissions
-** Role Based + Fine-Grained Permissions
+** Role based + fine-grained permissions
    + Massive improvement \pause
    + Make it easier to protect data \pause
    + Not the best though \pause
@@ -170,11 +181,6 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
 ** Principle of least privilege
 *** 
    Only give the privilege necessary to get the job done
-* What Could Social Networks Be?
-** Current Social Media
-   + Mostly all or nothing \pause
-   + No equivalent of public but inaccessible \pause
-   + All possible ways of interacting are lumped together
 ** Focusing on Posts
    + What if we focused on permissions attached to the post \pause
    + Better enforceable policies \pause
@@ -194,7 +200,8 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
    + Users "get" a post with certain permissions \pause
    + Sharing gives your followers copies of posts \pause
    + ...with what permissions?
-** Permissions and sharing
+** Permissions and sharing 
+   + Permissions are on the post
    + Changing permissions \pause
    + Permission to change permissions \pause
    + Downgrading permissions
@@ -221,32 +228,48 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
 ** New kinds of control
 *** 
 Post-centered thinking leads to new kinds of control over your posts.
+** Tagging control
+   + Preventing the adding or removing of tags \pause
+   + Preventing the ability to toggle searchability
 ** Self-destructing messages
 [[file:selfdestruct.png][file:~/projects/wwh-october-2015/selfdestruct.png]]
-** Controlling message depth
+** Message depth
+   Controlling the depth of the sharing tree: beyond a certain point no more sharing can happen
 * How it might work
 ** Making policy
 *** 
     With this fine-grained customization, we need a good user interface and sensible defaults
 ** Making policy
-   + 
+   + Role-based defaults for assigning permissions \pause
+   + Can override roles whenever needed \pause
+   + Setting permissions defaults by *tag* \pause
+   + Most uses are simple
 * Use cases
 ** Announcements
+*** 
+    You have a professional account for your business, and you want to make an announcement that can be shared but don't want anyone to comment or reply to it.
 ** Preventing pile-on
+*** 
+    Someone says something that you think was inappropriate, and you want to comment but I don't want to encourage your followers to pile on
 ** Preventing harassment
+*** 
+    You want to talk about a topic that has been *targeted for harassment* and you still want to be able to use relevant tags
 * Conclusions and Open Questions
 ** What we've covered
    + Problems with privacy in social media \pause
-   + 
-** What could be
-   + 
+   + The differences between social media and real life \pause
+   + Why social pressure isn't good enough \pause
+   + Posts should have permissions attached \pause
+   + Capabilities provide good intuition
 ** Next steps
+   + A proof of concept \pause
+   + Formalizing interactions in social media \pause
+   + Understanding incentives to change behavior
 ** Analyzing incentives
    + Analyzing social media game theoretically \pause
    + Devise systems that disincentivize poor behavior \pause
    + *A long way off*
 ** Questions?
-{\Huge Any questions?}
-* Footnotes
-
-[fn:1] I'm not saying that social media isn't /different/, but I argue we don't have to give up privacy to have these differences
+#+LaTeX: {\Huge
+Any questions?
+#+LaTeX: }
