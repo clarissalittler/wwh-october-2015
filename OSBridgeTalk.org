@@ -2,7 +2,7 @@
 #+TITLE: Social Networks, Privacy, and Information Flow
 #+AUTHOR: Clarissa Littler
 #+OPTIONS: H:2 toc:nil
-#+latex_header: \usetheme{Berkeley}
+#+latex_header: \usetheme{Hannover}
 #+latex_header: \usecolortheme{beetle}
 #+LaTeX_CLASS: beamer
 #+LaTeX_CLASS_OPTIONS: [bigger]
@@ -17,7 +17,8 @@
    + A fully implementable design \pause
    + How to make our proposal performant \pause
      + Premature optimization $= \sqrt{evil}$ \pause
-   + How to solve all privacy and content control problems
+   + How to stop all harassment problems \pause
+     + e.g. doxxing
 ** Definitions of some terms
    + Social network \pause
    + Post \pause
@@ -29,6 +30,21 @@
 ** Safety on the internet
 *** My position
     Everyone should have the right to participate in the public internet without fear of harassment either online or off
+** Safety on the internet
+*** The problem
+    The current structure of major social networks enables harassment, abuse, and other malicious behaviours \pause
+*** My hope
+    Improving privacy and control in social media will dramatically reduce the amount of harassment online
+** An import question
+*** 
+   #+LaTeX: {\Huge
+   Why do I care?
+   #+LaTeX: }
+** A more important question
+*** 
+    #+LaTeX: {\Huge
+    Why should *you* care?
+    #+LaTeX: }
 ** What should privacy mean in social media?
 *** Information flow as generalized privacy
     \pause
@@ -74,7 +90,7 @@
    + No revocation \pause
      + "The Internet is Forever" \pause
    + No general flow control
-* Social Contracts and Offline Conversations
+* Social Contracts
 ** Privacy offline
    + Offline privacy is subtle and nuanced \pause
    + Social graph is more controlled \pause
@@ -83,7 +99,7 @@
    + Social expectation
 ** In a restaurant
 [[file:Charmers_Cafe_patrons.jpg][file:~/projects/wwh-october-2015/Charmers_Cafe_patrons.jpg]]
-*** 
+*** attribution							   :noexport:
 By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons   
 ** Hackathons
 [[file:6134568134_986f3a1339_b.jpg][file:~/projects/wwh-october-2015/6134568134_986f3a1339_b.jpg]]
@@ -91,7 +107,7 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
 [[file:bench-people-smartphone-sun.jpg][file:~/projects/wwh-october-2015/bench-people-smartphone-sun.jpg]]
 ** Lectures
 [[file:CherryLectern.jpg][file:~/projects/wwh-october-2015/CherryLectern.jpg]]
-** Public but inaccessible
+** Unequal interactions
 *** 
     You can witness conversations without having expectation of being able to participate or 
     interact with them. 
@@ -106,12 +122,12 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
     + Public but inaccessible \pause
     + Expectation of how information will flow \pause
     + How is this enforced?
-** Social contracts and enforcement
-    + How do we stop poor behavior? \pause
+** How do we stop poor behavior?
+    + Social contracts \pause
     + Social not legal consequences \pause
     + Being cut off from friends is meaningful \pause
     + Public humiliation is a powerful force
-* Why Is The Internet Different?
+* What's the Difference?
 ** What's different about social media?
 ***    
     Why isn't social media like older forms of communication?
@@ -143,7 +159,7 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
        + Sharing and changing tags \pause
      + Conversing on a post \pause
      + Replying to a post
-* Assigning permissions in operating systems and social networks
+* Assigning Permissions
 ** Who gets these permission?
    + Policy controls permissions \pause
    + How do we set policy \pause
@@ -201,7 +217,7 @@ By renee_mcgurk (Charmers Cafe patrons) [CC BY 2.0 (http://creativecommons.org/l
    + Sharing gives your followers copies of posts \pause
    + ...with what permissions?
 ** Permissions and sharing 
-   + Permissions are on the post
+   + Permissions are on the post \pause
    + Changing permissions \pause
    + Permission to change permissions \pause
    + Downgrading permissions
@@ -254,6 +270,9 @@ Post-centered thinking leads to new kinds of control over your posts.
 ** Preventing harassment
 *** 
     You want to talk about a topic that has been *targeted for harassment* and you still want to be able to use relevant tags
+** Tweet streams
+*** 
+    A series of posts where you don't want replies interrupting you
 * Conclusions and Open Questions
 ** What we've covered
    + Problems with privacy in social media \pause
@@ -270,6 +289,7 @@ Post-centered thinking leads to new kinds of control over your posts.
    + Devise systems that disincentivize poor behavior \pause
    + *A long way off*
 ** Questions?
+*** 
 #+LaTeX: {\Huge
 Any questions?
 #+LaTeX: }
