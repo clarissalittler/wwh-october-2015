@@ -84,7 +84,7 @@
    + Locking down \pause
    + ... \pause
    + No, really, *that's it*
-** Why it's not enough
+** Why it's not enough						   :noexport:
    + Can control who /sees/ posts \pause
    + ...but not how they interact with it \pause
    + No revocation \pause
